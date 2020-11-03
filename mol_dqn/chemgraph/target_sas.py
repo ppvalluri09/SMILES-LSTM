@@ -1,3 +1,4 @@
+  
 # coding=utf-8
 # Copyright 2020 The Google Research Authors.
 #
@@ -24,18 +25,20 @@ import json
 import os
 from absl import app
 from absl import flags
-from rdkit import Chem
+
+
 from rdkit import Chem
 from rdkit.Chem import RDConfig
 import os
 import sys
 sys.path.append(os.path.join(RDConfig.RDContribDir, 'SA_Score'))
-# now you can import sascore!
 import sascorer
-from dqn import deep_q_networks
-from dqn import molecules as molecules_mdp
-from dqn import run_dqn
-from dqn.tensorflow_core import core
+
+
+from mol_dqn.chemgraph.dqn import deep_q_networks
+from mol_dqn.chemgraph.dqn import molecules as molecules_mdp
+from mol_dqn.chemgraph.dqn import run_dqn
+from mol_dqn.chemgraph.dqn.tensorflow_core import core
 
 flags.DEFINE_float('target_sas', 2.5,
                    'The target synthetic accessibility value')
@@ -48,7 +51,6 @@ class TargetSASMolecule(molecules_mdp.Molecule):
 
   def __init__(self, discount_factor, target_sas, loss_type, **kwargs):
     """Initializes the class.
-
     Args:
       discount_factor: Float. The discount factor. We only care about the
         molecule at the end of modification. In order to prevent a myopic
