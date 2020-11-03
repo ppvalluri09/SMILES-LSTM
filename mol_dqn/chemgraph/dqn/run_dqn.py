@@ -24,7 +24,8 @@ import functools
 import json
 import os
 import time
-
+import sys
+sys.path.append('/content/baselines')
 from absl import app
 from absl import flags
 from absl import logging
@@ -43,10 +44,10 @@ from six.moves import range
 import tensorflow.compat.v1 as tf
 from tensorflow.compat.v1 import gfile
 
-from mol_dqn.chemgraph.dqn import deep_q_networks
-from mol_dqn.chemgraph.dqn import molecules as molecules_mdp
-from mol_dqn.chemgraph.dqn.py import molecules
-from mol_dqn.chemgraph.dqn.tensorflow_core import core
+from dqn import deep_q_networks
+from dqn import molecules as molecules_mdp
+from dqn.py import molecules
+from dqn.tensorflow_core import core
 
 flags.DEFINE_string('model_dir',
                     '/namespace/gas/primary/zzp/dqn/r=3/exp2_bs_dqn',
