@@ -33,7 +33,7 @@ from rdkit.Chem import Draw
 from six.moves import range
 from six.moves import zip
 
-from mol_dqn.chemgraph.dqn.py import molecules
+from dqn.py import molecules
 
 
 class Result(
