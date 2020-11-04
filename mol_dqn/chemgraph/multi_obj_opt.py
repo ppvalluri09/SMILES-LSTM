@@ -35,10 +35,10 @@ from rdkit import Chem
 from rdkit import DataStructs
 from rdkit.Chem import AllChem
 from rdkit.Chem import QED
-from mol_dqn.chemgraph.dqn import deep_q_networks
-from mol_dqn.chemgraph.dqn import molecules as molecules_mdp
-from mol_dqn.chemgraph.dqn import run_dqn
-from mol_dqn.chemgraph.dqn.tensorflow_core import core
+from dqn import deep_q_networks
+from dqn import molecules as molecules_mdp
+from dqn import run_dqn
+from dqn.tensorflow_core import core
 
 FLAGS = flags.FLAGS
 
