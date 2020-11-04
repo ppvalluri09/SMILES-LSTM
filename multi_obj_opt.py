@@ -27,18 +27,22 @@ from __future__ import print_function
 import functools
 import json
 import os
+import sys
 
 from absl import app
 from absl import flags
 
 from rdkit import Chem
 from rdkit import DataStructs
+from rdkit.Chem import RDConfig
 from rdkit.Chem import AllChem
 from rdkit.Chem import QED
 from mol_dqn.chemgraph.dqn import deep_q_networks
 from mol_dqn.chemgraph.dqn import molecules as molecules_mdp
 from mol_dqn.chemgraph.dqn import run_dqn
 from mol_dqn.chemgraph.dqn.tensorflow_core import core
+
+sys.path.append(os.path.join(RDConfig.RDContribDir, 'SA_Score'))
 
 FLAGS = flags.FLAGS
 
