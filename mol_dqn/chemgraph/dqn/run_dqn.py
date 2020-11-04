@@ -25,7 +25,7 @@ import json
 import os
 import time
 import sys
-sys.path.append('/baselines')
+sys.path.append('/content/baselines')
 from absl import app
 from absl import flags
 from absl import logging
