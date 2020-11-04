@@ -1,5 +1,5 @@
 #!/bin/bash
-filename='temp/smiles_cleansed'
+filename='./SMILES-LSTM/temp/smiles_cleansed'
 n=1
 while read line; do
   if [ $n -ge 2 ]
@@ -8,3 +8,4 @@ while read line; do
   fi
   n=$((n+1))
 done < $filename
+
