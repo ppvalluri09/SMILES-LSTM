@@ -1,12 +1,14 @@
 #!/bin/bash
-filename='./temp/smiles_cleansed'
+generated_file='./temp/generated_smile.smi'
+cid_smile="./temp/smiles_cleansed.smi"
 n=1
 while read line; do
-  if [ $n -eq 1 ] 
-  then
+  if [ $n -eq 1 ]; then
     cid=$line
-  else
-    python ./mol_dqn/chemgraph/multi_obj_opt.py --model_dir="./save" --hparams="./mol_dqn/chemgraph/configs/multi_obj_dqn.json" --start_molecule="$cid" --target_molecule="$line" --similarity_weight=0.0 
   fi
   n=$((n+1))
-done < $filename
+done < $cid_smile
+
+while read line; do
+    python ./mol_dqn/chemgraph/multi_obj_opt.py --model_dir="./save" --hparams="./mol_dqn/chemgraph/configs/multi_obj_dqn.json" --start_molecule="$cid" --target_molecule="$line" --similarity_weight=0.0 
+done < $generated_file
