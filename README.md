@@ -13,6 +13,7 @@ Checklist
   - [x] Extract the SMILES format for each CID associated with predicted targets PDBIDS
   - [x] Clean the extracted SMILES 
   - [x] Train the LSTM network
-  - [ ] Sample new SMILES from the trained LSTM network and save them
+  - [x] Sample new SMILES from the trained LSTM network and save them
+  - [ ] Train the RL model
   - [x] Use the samples SMILES as the target molecule to the RL model with the start molecule being the input CID
   - [ ] Examine the output of the RL model
