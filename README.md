@@ -1,8 +1,6 @@
 # SMILES-LSTM
 
-SMILES LSTM
-
-# Instructions to run
+## Instructions to run
 
 1. Extracting SMILES
   ```python3 modules/main.py <cid>```
