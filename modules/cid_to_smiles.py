@@ -11,7 +11,8 @@ def get_smiles(pdbids, cid=None, limit=-1):
     df = df[df["pbdid"].isin(pdbids)]
     cids = []
     if cid is not None:
-        cids += [cid]
+        with open("../temp/cid", "w") as f:
+            f.write(cid + '\n')
     cids += df["cid"].unique().tolist()
     if limit == -1:
         limit = len(cids) + 1
