@@ -1,5 +1,5 @@
 #!/bin/bash
-filename='./SMILES-LSTM/temp/smiles_cleansed'
+filename='./temp/generated_smile.smi'
 n=1
 while read line; do
   if [ $n -ge 2 ]

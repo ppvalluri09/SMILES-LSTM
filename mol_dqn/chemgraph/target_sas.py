@@ -40,6 +40,11 @@ from mol_dqn.chemgraph.dqn import molecules as molecules_mdp
 from mol_dqn.chemgraph.dqn import run_dqn
 from mol_dqn.chemgraph.dqn.tensorflow_core import core
 
+#  from dqn import deep_q_networks
+#  from dqn import molecules as molecules_mdp
+#  from dqn import run_dqn
+#  from dqn.tensorflow_core import core
+
 flags.DEFINE_float('target_sas', 2.5,
                    'The target synthetic accessibility value')
 flags.DEFINE_string('loss_type', 'l2', 'The loss type')
