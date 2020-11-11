@@ -4,6 +4,12 @@ from cid_to_smiles import *
 
 test = False
 
+"""
+running it:-
+
+python3 main.py {CID(str)} {test(bool)}
+"""
+
 if __name__ == "__main__":
     cid = str(sys.argv[1])
     try:
