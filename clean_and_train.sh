@@ -8,3 +8,4 @@ fi
 
 cd LSTM_Chem
 python3 train.py
+cd ..
