@@ -51,7 +51,7 @@ from dqn.py import molecules
 from dqn.tensorflow_core import core
 
 flags.DEFINE_string('model_dir',
-                    '/namespace/gas/primary/zzp/dqn/r=3/exp2_bs_dqn',
+                    '/content',
                     'The directory to save data to.')
 flags.DEFINE_string('target_molecule', 'C1CCC2CCCCC2C1',
                     'The SMILES string of the target molecule.')
